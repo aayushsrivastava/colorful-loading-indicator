@@ -1,0 +1,73 @@
+:root {
+  --ball-radius: 30px;
+  --distance-between-balls: 10px;
+}
+.box {
+  position: relative;
+  height: 30px;
+  width: 230px;
+  padding: 0px 0px 0px 0px;
+}
+.ball {
+  height: var(--ball-radius);
+  width: var(--ball-radius);
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  top: 45%;
+  animation-name: sinewave;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.red-ball {
+  margin-left: var(--distance-between-balls);
+  background-color: hsl(0, 90%, 50%);
+}
+.blue-ball {
+  margin-left: var(--distance-between-balls);
+  background-color: hsl(240, 90%, 70%);
+}
+.green-ball {
+  margin-left: var(--distance-between-balls);
+  background-color: hsl(95, 100%, 40%);
+}
+.orange-ball {
+  margin-left: var(--distance-between-balls);
+  background-color: orange;
+}
+.black-ball {
+  margin-left: var(--distance-between-balls);
+  background-color: #444;
+}
+.white-ball {
+  margin-left: var(--distance-between-balls);
+  background-color: #EEE;
+}
+.position2 {
+  animation-delay: -0.2s;
+}
+.position3 {
+  animation-delay: -0.4s;
+}
+.position4 {
+  animation-delay: -0.6s;
+}
+.position5 {
+  animation-delay: -0.8s;
+}
+@keyframes sinewave {
+  0% {
+    top: 45%;
+  }
+  25% {
+    top: 0%;
+  }
+  75% {
+    top: 90%;
+  }
+  100% {
+    top: 45%
+  }
+}
